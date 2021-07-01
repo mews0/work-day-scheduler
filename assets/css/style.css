@@ -1,10 +1,3 @@
-:root {
-  --red: rgb(241, 77, 87);
-  --green: rgb(116, 233, 110);
-  --blue: rgb(17, 176, 202);
-  --gray: rgb(204, 204, 204);
-}
-
 body {
   font-family: 'Open Sans', sans-serif;
   font-size: 16px;
@@ -28,11 +21,7 @@ textarea{
   border-bottom: 10px solid black;
 }
 
-.description{
-  white-space: pre-wrap;
-}
-
-.time-block{
+.time-block {
   text-align: center;
   border-radius: 15px;
 }
@@ -40,13 +29,17 @@ textarea{
 .row {
   white-space: pre-wrap;
   height: 80px;
-  border-top: 1px solid white;;
+  border-top: 1px solid white;
 }
 
 .hour {
   background-color: #ffffff;
   color: #000000;
   border-top: 1px dashed #000000;
+}
+
+.description {
+  white-space: pre-wrap;
 }
 
 .past {
