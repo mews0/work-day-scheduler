@@ -1,3 +1,10 @@
+:root {
+  --red: rgb(241, 77, 87);
+  --green: rgb(116, 233, 110);
+  --blue: rgb(17, 176, 202);
+  --gray: rgb(204, 204, 204);
+}
+
 body {
   font-family: 'Open Sans', sans-serif;
   font-size: 16px;
