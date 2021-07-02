@@ -16,3 +16,9 @@ for (hour = 0; hour < 9; hour++) {
   }
 }
 
+// If user clicks on save button, then save text in description to local storage
+$(`.saveBtn`).click(function(event) {
+  let lsKey = event.target.previousElementSibling.previousElementSibling.textContent;
+  let lsValue = event.target.previousElementSibling.value;
+  localStorage.setItem(lsKey, lsValue);
+});
