@@ -9,13 +9,13 @@ for (hour = 0; hour < 9; hour++) {
   
   // Set background color of event description based on whether the hour is in the past, present, or future  
   if (hour + 9 < currentHour) {
-    $(`.description`).eq(hour).addClass(`.past`);
+    $(`.description`).eq(hour).addClass(`past`);
   }
   else if (hour + 9 == currentHour) {
-    $(`.description`).eq(hour).addClass(`.present`);
+    $(`.description`).eq(hour).addClass(`present`);
   }
   else {
-    $(`.description`).eq(hour).addClass(`.future`);
+    $(`.description`).eq(hour).addClass(`future`);
   }
 }
 
