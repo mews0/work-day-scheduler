@@ -1,5 +1,5 @@
 // Display current day in jumbotron
-let currentDay = moment().format(`dddd, MMMM do`);
+let currentDay = moment().format(`dddd, MMMM Do`);
 $(`#currentDay`).text(currentDay);
 
 let currentHour = moment().format(`H`);
