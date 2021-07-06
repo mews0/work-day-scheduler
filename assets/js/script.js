@@ -1,11 +1,12 @@
-// Display current day in jumbotron
-let currentDay = moment().format(`dddd, MMMM Do`);
-$(`#currentDay`).text(currentDay);
+let currentHour = moment().hour();
+let todaysDate = moment().format(`dddd, MMMM Do`);
 
-let currentHour = moment().format(`H`);
+// Display today's date in jumbotron
+$(`#todaysDate`).text(todaysDate);
+
 for (hour = 0; hour < 9; hour++) {
   // Display text for event descriptions saved in local storage
-  $(`.description`).eq(hour).val(localStorage.getItem($(`.description`).eq(hour).prev().text()))
+  $(`.description`).eq(hour).val(localStorage.getItem($(`.description`).eq(hour).prev().text()));
   
   // Set background color of event description based on whether the hour is in the past, present, or future  
   if (hour + 9 < currentHour) {
@@ -25,3 +26,10 @@ $(`.saveBtn`).click(function(event) {
   let lsValue = event.target.previousElementSibling.value;
   localStorage.setItem(lsKey, lsValue);
 });
+
+// Check current time every minute and reload page if current hour displayed on page does not equal actual current hour
+setInterval(function() {
+  if (currentHour != moment().hour()) {
+    location.reload();
+  }
+}, 60000);
